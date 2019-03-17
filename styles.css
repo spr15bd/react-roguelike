@@ -1,0 +1,119 @@
+.invisible {
+  	opacity:0;
+}
+.visible {
+  	opacity:1;
+}
+button {
+  	height:35px;
+}
+button:hover {
+  	background:gray;
+}
+#title {
+  	font-family: tahoma;
+  	font-weight: 200;
+  	color:gray;
+  	background-color:white;
+  	text-align: center;
+  	font-size: 3.2em;
+  	width:100%;
+  	height:150px;
+  	position:fixed;
+  	top:0;
+}
+#caption {
+  	position:fixed;
+  	text-align: center;
+  	width:100%;
+  	padding-top:60px;
+}
+#status {
+  	position:fixed;
+  	text-align: center;
+  	margin-left:auto;
+  	margin-right:auto;
+  	width: 100%;
+  	padding-top:100px;
+  	padding-bottom: 3%;
+  	z-index:5;
+}
+#message {
+  	font-family: fantasy;
+  	font-weight: 600;
+  	color:black;
+  	background-color:white;
+  	text-align: center;
+  	font-size: 3.2em;
+  	position:fixed;
+  	width:30%;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+}
+.player-property {
+  	display:inline-block;
+  	width: 130px;
+ }
+#darkness {
+  	bottom:80px;
+  	display:inline-block;
+  	z-index:5;
+}
+#wall {
+  	background-color:gray;
+  	float:left;
+  	width:10px;
+  	height:10px;
+}
+#floor {  
+  	background-color:black;
+  	float:left;
+  	width:10px;
+  	height:10px;
+}
+#player {  
+  	background-color:blue;
+  	float: left;
+  	margin:auto;
+  	top:50%;
+  	width:10px;
+  	height:10px;
+}
+#health-container {  
+  	background-color:green;
+  	display:inline;
+  	float:left;
+  	width:10px;
+  	height:10px;
+}
+#weapon {  
+  	background-color:yellow;
+  	float:left;
+  	width:10px;
+  	height:10px;
+}
+#monster {  
+  	background-color:red;
+  	float:left;
+  	width:10px;
+  	height:10px;
+}
+#boss {  
+  	background-color:red;
+  	float:left;
+  	width:10px;
+  	height:10px;	
+}
+#teleport {  
+  	background-color:purple;
+ 	float:left;
+  	width:10px;
+  	height:10px;
+}
+#map {
+  	margin-left:auto;
+  	margin-right:auto;
+  	padding-top:10%;
+  	width:1280px;
+}
