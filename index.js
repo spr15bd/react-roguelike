@@ -1,6 +1,7 @@
 function Map(props) {
+	console.log("Props in map: "+props);
   	const grid = [];
-  	for (var j=0; j<200; j++) {
+  	for (var j=0; j<props.height; j++) {
     		for (var i=0; i<props.width; i++) {
       			let squareId=props.grid[i][j].type;
       			let visibility=props.grid[i][j].visibility;
