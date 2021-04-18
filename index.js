@@ -6,7 +6,9 @@ function Map(props) {
 			for (var i=0; i<props.width; i++) {
 				if (props.grid[i][j].type != null & props.grid[i][j].visibility != null) {
 					//let squareId=props.grid[i][j].type;
+					let squareId="floor";
 					//let visibility=props.grid[i][j].visibility;
+					let visibility="visible";
 					grid.push(
 						<div id={squareId} className={visibility}>
 						</div>
