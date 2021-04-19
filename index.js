@@ -464,7 +464,7 @@ class Main extends React.Component {
       			<div id="container-fluid">
         			<div id="title">React Roguelike
         			</div>
-↑        			<div id="caption">Kill the boss in dungeon 4.   Use ↑ ↓ ← → keys to move.   Green=Health,   Red=Enemy.
+↑        			<div id="caption">Kill the boss in dungeon 4. &nbsp; &nbsp;   Use ↑ ↓ ← → keys to move.   &nbsp; &nbsp; Green=Health,  &nbsp; &nbsp;  Red=Enemy.
         			</div>
         			<div>
           				<Data mapWidth="128" mapHeight="120" healthContainers="10" playerHealth="100" monsters="25" flashlightRadius={13}/>
