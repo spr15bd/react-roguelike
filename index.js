@@ -293,8 +293,7 @@ class Data extends React.Component {
   	}
   	key(event) {
     		if (!this.state.keyBoardLocked) { 
-      			let keyPressed = event.keyCode;
-			switch(keyPressed) {
+			switch(event.keyCode) {
         			case 37 :
           				this.movePlayer(-1, 0);
           				break;
