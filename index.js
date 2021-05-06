@@ -81,6 +81,7 @@ class Data extends React.Component {
     		this.displayMessage=this.displayMessage.bind(this);
     		this.toggleDarkness=this.toggleDarkness.bind(this);
     		this.updateDarkness=this.updateDarkness.bind(this);
+		this.key=this.key.bind(this);
     		this.playerHealth=this.props.playerHealth;
     		this.bossHealth=100;
     		this.weapon="gloves";
@@ -104,7 +105,8 @@ class Data extends React.Component {
     		window.scrollTo(0,0);
   	}
   	componentDidMount() {
-    		document.onkeydown = this.key.bind(this);
+    		//document.onkeydown = this.key.bind(this);
+		document.onkeydown = this.key;
 		//document.addEventListener("keydown", this.key);
     		window.focus();
     		this.displayMessage=this.displayMessage.bind(this);
