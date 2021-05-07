@@ -81,7 +81,6 @@ class Data extends React.Component {
     		this.displayMessage=this.displayMessage.bind(this);
     		this.toggleDarkness=this.toggleDarkness.bind(this);
     		this.updateDarkness=this.updateDarkness.bind(this);
-		this.key=this.key.bind(this);
     		this.playerHealth=this.props.playerHealth;
     		this.bossHealth=100;
     		this.weapon="gloves";
@@ -105,8 +104,8 @@ class Data extends React.Component {
     		window.scrollTo(0,0);
   	}
   	componentDidMount() {
-    		//window.onkeydown = this.key.bind(this);
-		window.addEventListener("keydown", this.key);
+    		document.onkeydown = this.key.bind(this);
+		//document.addEventListener("keydown", this.key);
     		window.focus();
     		this.displayMessage=this.displayMessage.bind(this);
     		this.toggleDarkness=this.toggleDarkness.bind(this);
@@ -321,30 +320,27 @@ class Data extends React.Component {
       			this.playerPos.y+=y;
       			this.grid[this.playerPos.x][this.playerPos.y].type="player";
       			window.scrollBy(0, y*10);
-      			this.setState({grid:this.grid});
-			
-			if (nextPlayerPositionType=="health-container") {
-				this.playerHealth=parseInt(this.playerHealth)+20;
-			} else if (nextPlayerPositionType=="teleport") {
-				// reset grid, teleport to next level
-				for (var x=0;x<this.props.mapWidth;x++) {
-					for (var y=0;y<this.props.mapHeight;y++) {
-						this.grid[x][y].type="wall";
-					}
-				}
-				this.loadDungeon(++this.dungeon);
-				window.scrollTo(0,0);
-			} else if (nextPlayerPositionType=="weapon") {
-				switch (this.dungeon) {
-					case 0: { this.weapon="stick";  this.attack=5; break; }
-					case 1: { this.weapon="axe";  this.attack=8; break; }
-					case 2: { this.weapon="sword";  this.attack=11; break; }
-					case 3: { this.weapon="fireball";  this.attack=15; break; }
-					case 4: { this.weapon="thunderbolt";  this.attack=20; break; }
-				}       
-			}	
-			
-      			
+      			//this.setState({grid:this.grid});
+      			if (nextPlayerPositionType=="health-container") {
+        			this.playerHealth=parseInt(this.playerHealth)+20;
+      			} else if (nextPlayerPositionType=="teleport") {
+        			// reset grid, teleport to next level
+        			for (var x=0;x<this.props.mapWidth;x++) {
+          				for (var y=0;y<this.props.mapHeight;y++) {
+            					this.grid[x][y].type="wall";
+          				}
+        			}
+        			this.loadDungeon(++this.dungeon);
+        			window.scrollTo(0,0);
+      			} else if (nextPlayerPositionType=="weapon") {
+        			switch (this.dungeon) {
+          				case 0: { this.weapon="stick";  this.attack=5; break; }
+          				case 1: { this.weapon="axe";  this.attack=8; break; }
+          				case 2: { this.weapon="sword";  this.attack=11; break; }
+          				case 3: { this.weapon="fireball";  this.attack=15; break; }
+          				case 4: { this.weapon="thunderbolt";  this.attack=20; break; }
+        			}       
+      			}
     		} else if (nextPlayerPositionType=="monster") {
       			this.grid[this.playerPos.x+x][this.playerPos.y+y].health-=this.attack*Math.round(Math.random()*7);
       			this.playerHealth-=Math.round(Math.random()*20);
