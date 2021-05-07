@@ -104,7 +104,7 @@ class Data extends React.Component {
     		window.scrollTo(0,0);
   	}
   	componentDidMount() {
-    		document.onkeydown = this.key.bind(this);
+    		window.onkeydown = this.key.bind(this);
 		//document.addEventListener("keydown", this.key);
     		window.focus();
     		this.displayMessage=this.displayMessage.bind(this);
