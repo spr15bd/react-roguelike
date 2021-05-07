@@ -105,14 +105,14 @@ class Data extends React.Component {
     		window.scrollTo(0,0);
   	}
   	componentDidMount() {
-    		document.onkeydown = this.key.bind(this);
-		//document.onkeydown = this.key;6/5/21
+    		//document.onkeydown = this.key.bind(this);
+		document.onkeydown = this.key;
 		
 		//document.addEventListener("keydown", this.key);
     		window.focus();
-    		//this.displayMessage=this.displayMessage.bind(this);6/5/21
-    		//this.toggleDarkness=this.toggleDarkness.bind(this);6/5/21
-    		//this.updateDarkness=this.updateDarkness.bind(this);6/5/21
+    		this.displayMessage=this.displayMessage.bind(this);6/5/21
+    		this.toggleDarkness=this.toggleDarkness.bind(this);6/5/21
+    		this.updateDarkness=this.updateDarkness.bind(this);6/5/21
    	}
   	render() {
     		return(
