@@ -320,7 +320,7 @@ class Data extends React.Component {
      			this.playerPos.x+=x;
       			this.playerPos.y+=y;
       			this.grid[this.playerPos.x][this.playerPos.y].type="player";
-      			window.scrollBy(0, y*10);
+      			//window.scrollBy(0, y*10);
       			//this.setState({grid:this.grid});
       			if (nextPlayerPositionType=="health-container") {
         			this.playerHealth=parseInt(this.playerHealth)+20;
