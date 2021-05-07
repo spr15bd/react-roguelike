@@ -321,8 +321,9 @@ class Data extends React.Component {
       			this.playerPos.y+=y;
       			this.grid[this.playerPos.x][this.playerPos.y].type="player";
       			window.scrollBy(0, y*10);
-      			this.setState({grid:this.grid}, ()=>{
-				if (nextPlayerPositionType=="health-container") {
+      			this.setState({grid:this.grid});
+			
+			if (nextPlayerPositionType=="health-container") {
 					this.playerHealth=parseInt(this.playerHealth)+20;
 				} else if (nextPlayerPositionType=="teleport") {
 					// reset grid, teleport to next level
@@ -342,7 +343,7 @@ class Data extends React.Component {
 						case 4: { this.weapon="thunderbolt";  this.attack=20; break; }
 					}       
 				}	
-			});
+			}
       			
     		} else if (nextPlayerPositionType=="monster") {
       			this.grid[this.playerPos.x+x][this.playerPos.y+y].health-=this.attack*Math.round(Math.random()*7);
