@@ -103,11 +103,11 @@ class Data extends React.Component {
     		this.loadDungeon();
     		window.scrollTo(0,0);
   	}
-  	componentWillMount() {
-		window.focus();
+  	componentDidMount() {
+		
     		//document.onkeypress = this.key.bind(this);
 		window.addEventListener("keydown", this.key);
-    		
+    		window.focus();
     		//this.displayMessage=this.displayMessage.bind(this);
     		//this.toggleDarkness=this.toggleDarkness.bind(this);
     		//this.updateDarkness=this.updateDarkness.bind(this);
