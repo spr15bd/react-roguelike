@@ -107,7 +107,7 @@ class Data extends React.Component {
   	componentDidMount() {
 		
     		//document.onkeypress = this.key.bind(this);
-		window.addEventListener("keydown", this.key);
+		document.addEventListener("keydown", this.key);
     		window.focus();
     		//this.displayMessage=this.displayMessage.bind(this);
     		//this.toggleDarkness=this.toggleDarkness.bind(this);
