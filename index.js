@@ -103,7 +103,7 @@ class Data extends React.Component {
     		this.loadDungeon();
     		window.scrollTo(0,0);
   	}
-  	componentDidMount() {
+  	componentWillMount() {
     		document.onkeydown = this.key.bind(this);
 		//document.addEventListener("keydown", this.key);
     		window.focus();
@@ -373,7 +373,7 @@ class Data extends React.Component {
       				this.displayMessage("You win - Well done!");
     			}
     		}
-    		//this.updateDarkness();
+    		this.updateDarkness();
     		// if the player's health is 0, game over
     		if (this.playerHealth<=0) {
       			this.displayMessage("Game Over - Unlucky");
