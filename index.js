@@ -110,6 +110,7 @@ class Data extends React.Component {
     		this.displayMessage=this.displayMessage.bind(this);
     		this.toggleDarkness=this.toggleDarkness.bind(this);
     		this.updateDarkness=this.updateDarkness.bind(this);
+		this.updateDarkness();
    	}
   	render() {
     		return(
@@ -405,7 +406,7 @@ class Data extends React.Component {
       				}
     			}
     		}
-		this.setState({isDark:!this.state.isDark});
+		this.setState({grid:this.grid});
   	}
   	toggleDarkness() {
     		/*if (this.state.isDark){
