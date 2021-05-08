@@ -372,7 +372,7 @@ class Data extends React.Component {
       				this.displayMessage("You win - Well done!");
     			}
     		}
-    		this.updateDarkness();
+    		//this.updateDarkness();
     		// if the player's health is 0, game over
     		if (this.playerHealth<=0) {
       			this.displayMessage("Game Over - Unlucky");
@@ -385,26 +385,26 @@ class Data extends React.Component {
     			for (var x=0; x<this.props.mapWidth; x++) {
       				for (var y=0; y<this.props.mapHeight; y++) {
         				if (x>=this.playerPos.x-this.props.flashlightRadius && x<this.playerPos.x+this.props.flashlightRadius+1 && y>=this.playerPos.y-this.props.flashlightRadius && y<this.playerPos.y+this.props.flashlightRadius+1) {
-          					//if (x>=0 && x<this.props.mapWidth && y>=0 && y<this.props.mapHeight) {
+          					if (x>=0 && x<this.props.mapWidth && y>=0 && y<this.props.mapHeight) {
             						this.grid[x][y].visibility="visible";
-          					//}
+          					}
         				} else {
           					this.grid[x][y].visibility="invisible";
         				}
-        				/*if ((x<=this.playerPos.x-(this.props.flashlightRadius-3)||x>=this.playerPos.x+(this.props.flashlightRadius-3))&&(y<=this.playerPos.y-(this.props.flashlightRadius-1)||y>=this.playerPos.y+this.props.flashlightRadius-1)||(y<=this.playerPos.y-(this.props.flashlightRadius-3)||y>=this.playerPos.y+(this.props.flashlightRadius-3))&&(x<=this.playerPos.x-(this.props.flashlightRadius-1)||x>=this.playerPos.x+(this.props.flashlightRadius-1))) {
+        				if ((x<=this.playerPos.x-(this.props.flashlightRadius-3)||x>=this.playerPos.x+(this.props.flashlightRadius-3))&&(y<=this.playerPos.y-(this.props.flashlightRadius-1)||y>=this.playerPos.y+this.props.flashlightRadius-1)||(y<=this.playerPos.y-(this.props.flashlightRadius-3)||y>=this.playerPos.y+(this.props.flashlightRadius-3))&&(x<=this.playerPos.x-(this.props.flashlightRadius-1)||x>=this.playerPos.x+(this.props.flashlightRadius-1))) {
           					if (x>=0 && x<this.props.mapWidth && y>=0 && y<this.props.mapHeight) {
             						this.grid[x][y].visibility="invisible";
           					}
-        				}*/
+        				}
        				}
     			}
-    		} /*else {
+    		} else {
       			for (var x=0; x<this.props.mapWidth; x++) {
       				for (var y=0; y<this.props.mapHeight; y++) {
         				this.grid[x][y].visibility="visible";
       				}
     			}
-    		}*/
+    		}
   	}
   	toggleDarkness() {
     		if (this.state.isDark){
