@@ -99,11 +99,9 @@ class Data extends React.Component {
     		for (var x=0;x<this.props.mapWidth;x++) {
       			this.grid[x]=new Array(this.props.mapHeight);
     		}
-    		
+    		this.state.grid=this.grid;
     		this.loadDungeon();
-		//this.updateDarkness();
     		window.scrollTo(0,0);
-		
   	}
   	componentDidMount() {
     		document.onkeydown = this.key.bind(this);
@@ -112,9 +110,6 @@ class Data extends React.Component {
     		this.displayMessage=this.displayMessage.bind(this);
     		this.toggleDarkness=this.toggleDarkness.bind(this);
     		this.updateDarkness=this.updateDarkness.bind(this);
-		//this.setState({grid:this.grid});
-		//this.updateDarkness();
-		
    	}
   	render() {
     		return(
@@ -410,7 +405,7 @@ class Data extends React.Component {
       				}
     			}
     		}
-		//this.setState({isDark:!this.state.isDark});
+		this.setState({isDark:!this.state.isDark});
   	}
   	toggleDarkness() {
     		/*if (this.state.isDark){
