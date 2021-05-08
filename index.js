@@ -303,11 +303,11 @@ class Data extends React.Component {
           				this.movePlayer(1, 0);
           				break;
         			case 38 : 
-          				event.preventDefault();
+          				//event.preventDefault();
           				this.movePlayer(0, -1);
           				break;
         			case 40 :
-          				event.preventDefault();
+          				//event.preventDefault();
           				this.movePlayer(0,1);
           				break;
       			}
@@ -373,13 +373,13 @@ class Data extends React.Component {
       				this.displayMessage("You win - Well done!");
     			}
     		}
-    		//this.updateDarkness();	// big pauses here
+    		this.updateDarkness();	// big pauses here
     		// if the player's health is 0, game over
     		if (this.playerHealth<=0) {
       			this.displayMessage("Game Over - Unlucky");
       			window.scrollTo(0,0);
     		}
-		this.setState({grid:this.grid});
+		//this.setState({grid:this.grid});
    	}
   	updateDarkness() {
     		if (this.state.isDark) {
