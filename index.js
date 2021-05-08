@@ -99,7 +99,7 @@ class Data extends React.Component {
     		for (var x=0;x<this.props.mapWidth;x++) {
       			this.grid[x]=new Array(this.props.mapHeight);
     		}
-    		this.state.grid=this.grid;
+    		//this.state.grid=this.grid;
     		this.loadDungeon();
     		window.scrollTo(0,0);
   	}
@@ -110,7 +110,7 @@ class Data extends React.Component {
     		this.displayMessage=this.displayMessage.bind(this);
     		this.toggleDarkness=this.toggleDarkness.bind(this);
     		this.updateDarkness=this.updateDarkness.bind(this);
-		this.updateDarkness();
+		//this.updateDarkness();
    	}
   	render() {
     		return(
