@@ -313,6 +313,7 @@ class Data extends React.Component {
     		}
     	}
   	movePlayer(x, y) {
+		this.updateDarkness();
     		let nextPlayerPositionType=this.grid[this.playerPos.x+x][this.playerPos.y+y].type;
     		if (nextPlayerPositionType=="floor"||nextPlayerPositionType=="health-container"||nextPlayerPositionType=="teleport"||nextPlayerPositionType=="weapon") {
       			this.grid[this.playerPos.x][this.playerPos.y].type="floor";
@@ -371,7 +372,7 @@ class Data extends React.Component {
       				this.displayMessage("You win - Well done!");
     			}
     		}
-    		this.updateDarkness();
+    		//this.updateDarkness();
     		// if the player's health is 0, game over
     		if (this.playerHealth<=0) {
       			this.displayMessage("Game Over - Unlucky");
@@ -430,7 +431,7 @@ class Data extends React.Component {
 				}
       			}
     		}
-    		this.setState({isDark:!this.state.isDark, grid: this.grid});
+    		this.setState({isDark:!this.state.isDark});
   	}
   	// display win or lose message, reload game
   	displayMessage(message) {
