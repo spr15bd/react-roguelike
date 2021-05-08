@@ -196,7 +196,7 @@ class Data extends React.Component {
       			};
       			if (this.grid[this.playerPos.x][this.playerPos.y].type=="floor") {
         			this.grid[this.playerPos.x][this.playerPos.y].type="player";
-        			this.updateDarkness();
+        			//this.updateDarkness();
         			playerSpawned=true;
       			}
     		}
