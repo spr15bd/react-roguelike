@@ -101,9 +101,9 @@ class Data extends React.Component {
     		}
     		
     		this.loadDungeon();
-		this.updateDarkness();
+		//this.updateDarkness();
     		window.scrollTo(0,0);
-		this.setState({grid:this.grid});
+		
   	}
   	componentDidMount() {
     		document.onkeydown = this.key.bind(this);
@@ -112,7 +112,9 @@ class Data extends React.Component {
     		this.displayMessage=this.displayMessage.bind(this);
     		this.toggleDarkness=this.toggleDarkness.bind(this);
     		this.updateDarkness=this.updateDarkness.bind(this);
-		//this.updateDarkness();
+		this.setState({grid:this.grid});
+		this.updateDarkness();
+		
    	}
   	render() {
     		return(
