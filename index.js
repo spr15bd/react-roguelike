@@ -373,7 +373,7 @@ class Data extends React.Component {
       				this.displayMessage("You win - Well done!");
     			}
     		}
-    		this.updateDarkness();
+    		//this.updateDarkness();	// big pauses here
     		// if the player's health is 0, game over
     		if (this.playerHealth<=0) {
       			this.displayMessage("Game Over - Unlucky");
