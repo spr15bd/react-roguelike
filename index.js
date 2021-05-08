@@ -101,6 +101,7 @@ class Data extends React.Component {
     		}
     		
     		this.loadDungeon();
+		this.updateDarkness();
     		window.scrollTo(0,0);
 		this.setState({grid:this.grid});
   	}
