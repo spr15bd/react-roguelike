@@ -99,9 +99,10 @@ class Data extends React.Component {
     		for (var x=0;x<this.props.mapWidth;x++) {
       			this.grid[x]=new Array(this.props.mapHeight);
     		}
-    		//this.state.grid=this.grid;
+    		
     		this.loadDungeon();
     		window.scrollTo(0,0);
+		this.setState({grid:this.grid});
   	}
   	componentDidMount() {
     		document.onkeydown = this.key.bind(this);
