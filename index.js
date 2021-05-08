@@ -313,7 +313,7 @@ class Data extends React.Component {
     		}
     	}
   	movePlayer(x, y) {
-		this.updateDarkness();
+		
     		let nextPlayerPositionType=this.grid[this.playerPos.x+x][this.playerPos.y+y].type;
     		if (nextPlayerPositionType=="floor"||nextPlayerPositionType=="health-container"||nextPlayerPositionType=="teleport"||nextPlayerPositionType=="weapon") {
       			this.grid[this.playerPos.x][this.playerPos.y].type="floor";
@@ -372,7 +372,7 @@ class Data extends React.Component {
       				this.displayMessage("You win - Well done!");
     			}
     		}
-    		//this.updateDarkness();
+    		this.updateDarkness();
     		// if the player's health is 0, game over
     		if (this.playerHealth<=0) {
       			this.displayMessage("Game Over - Unlucky");
@@ -391,11 +391,11 @@ class Data extends React.Component {
         				} else {
           					this.grid[x][y].visibility="invisible";
         				}
-        				if ((x<=this.playerPos.x-(this.props.flashlightRadius-3)||x>=this.playerPos.x+(this.props.flashlightRadius-3))&&(y<=this.playerPos.y-(this.props.flashlightRadius-1)||y>=this.playerPos.y+this.props.flashlightRadius-1)||(y<=this.playerPos.y-(this.props.flashlightRadius-3)||y>=this.playerPos.y+(this.props.flashlightRadius-3))&&(x<=this.playerPos.x-(this.props.flashlightRadius-1)||x>=this.playerPos.x+(this.props.flashlightRadius-1))) {
+        				/*if ((x<=this.playerPos.x-(this.props.flashlightRadius-3)||x>=this.playerPos.x+(this.props.flashlightRadius-3))&&(y<=this.playerPos.y-(this.props.flashlightRadius-1)||y>=this.playerPos.y+this.props.flashlightRadius-1)||(y<=this.playerPos.y-(this.props.flashlightRadius-3)||y>=this.playerPos.y+(this.props.flashlightRadius-3))&&(x<=this.playerPos.x-(this.props.flashlightRadius-1)||x>=this.playerPos.x+(this.props.flashlightRadius-1))) {
           					if (x>=0 && x<this.props.mapWidth && y>=0 && y<this.props.mapHeight) {
             						this.grid[x][y].visibility="invisible";
           					}
-        				}
+        				}*/
        				}
     			}
     		} else {
