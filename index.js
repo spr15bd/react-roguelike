@@ -406,7 +406,7 @@ class Data extends React.Component {
       				}
     			}
     		}
-		this.setState({isDark:!this.state.isDark});
+		//this.setState({isDark:!this.state.isDark});
   	}
   	toggleDarkness() {
     		/*if (this.state.isDark){
