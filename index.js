@@ -384,7 +384,7 @@ class Data extends React.Component {
     		if (this.state.isDark) {
     			for (var x=0; x<this.props.mapWidth; x++) {
       				for (var y=0; y<this.props.mapHeight; y++) {
-        				if (x>=this.playerPos.x-this.props.flashlightRadius && x<this.playerPos.x+this.props.flashlightRadius+1 && y>=this.playerPos.y-this.props.flashlightRadius && y<this.playerPos.y+this.props.flashlightRadius+1) {
+        				if (x>=this.playerPos.x-this.props.flashlightRadius &&& x<this.playerPos.x+this.props.flashlightRadius+1 &&& y>=this.playerPos.y-this.props.flashlightRadius &&& y<this.playerPos.y+this.props.flashlightRadius+1) {
           					if (x>=0 && x<this.props.mapWidth && y>=0 && y<this.props.mapHeight) {
             						this.grid[x][y].visibility="visible";
           					}
