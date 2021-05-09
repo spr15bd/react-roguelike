@@ -410,7 +410,7 @@ class Data extends React.Component {
 				
     			}
     		}
-		//this.setState({grid:this.grid});
+		this.setState({grid:this.grid});
   	}
   	toggleDarkness() {
     		/*if (this.state.isDark){
