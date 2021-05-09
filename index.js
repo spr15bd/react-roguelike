@@ -118,7 +118,7 @@ class Data extends React.Component {
       			<div>
         			<Status playerHealth={this.playerHealth} weapon={this.weapon} attack={this.attack} dungeon={this.dungeon} level={this.level} xp={this.xp} nextLevel={this.xpForNextLevel} darknessOnOff={this.toggleDarkness}/>
         			<Modal messageVisible={this.state.messageVisible} message={this.state.message}/>
-        			<Map width={this.props.mapWidth} height={this.props.mapHeight} grid={this.state.grid}/>
+        			<Map width={this.props.mapWidth} height={this.props.mapHeight} grid={this.grid}/>
       			</div>
     		);
   	}
@@ -313,7 +313,7 @@ class Data extends React.Component {
           				break;
       			}
 			this.updateDarkness();	// big pauses here
-			//this.setState({grid:this.grid});
+			this.setState({grid:this.grid});
     		}
     	}
   	movePlayer(x, y) {
@@ -383,7 +383,7 @@ class Data extends React.Component {
       			window.scrollTo(0,0);
     		}
 		//this.updateDarkness();	// big pauses here
-		this.setState({grid:this.grid});
+		//this.setState({grid:this.grid});
    	}
   	updateDarkness() {
     		if (this.isDark) {
@@ -443,7 +443,7 @@ class Data extends React.Component {
     		//this.setState({isDark:!this.state.isDark}, this.updateDarkness());
 		this.isDark = !this.isDark;
 		this.updateDarkness();
-		//this.setState({grid:this.grid});
+		this.setState({grid:this.grid});
   	}
   	// display win or lose message, reload game
   	displayMessage(message) {
