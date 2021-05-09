@@ -100,6 +100,7 @@ class Data extends React.Component {
       			this.grid[x]=new Array(this.props.mapHeight);
     		}
     		//this.state.grid=this.grid;
+		this.isDark = true;
     		this.loadDungeon();
     		window.scrollTo(0,0);
   	}
@@ -383,7 +384,7 @@ class Data extends React.Component {
 		//this.setState({grid:this.grid});
    	}
   	updateDarkness() {
-    		if (this.state.isDark) {
+    		if (this.isDark) {
     			for (var x=0; x<this.props.mapWidth; x++) {
       				for (var y=0; y<this.props.mapHeight; y++) {
         				if (x>=this.playerPos.x-this.props.flashlightRadius && x<this.playerPos.x+this.props.flashlightRadius+1 && y>=this.playerPos.y-this.props.flashlightRadius && y<this.playerPos.y+this.props.flashlightRadius+1) {
@@ -437,8 +438,9 @@ class Data extends React.Component {
       			}
     		}
 		*/
-    		this.setState({isDark:!this.state.isDark}, this.updateDarkness());
-		
+    		//this.setState({isDark:!this.state.isDark}, this.updateDarkness());
+		this.isDark = !this.isDark;
+		this.updateDarkness();
   	}
   	// display win or lose message, reload game
   	displayMessage(message) {
