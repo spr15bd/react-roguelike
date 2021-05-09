@@ -5,7 +5,7 @@ function Map(props) {
 		for (var j=0; j<props.height; j++) {
 			for (var i=0; i<props.width; i++) {
 				//if (props.grid[i][j].type != null & props.grid[i][j].visibility != null) {
-				if (props.grid[i][j].type != null & props.grid[i][j].visibility != null) {
+				if (props.grid[i][j].type != null && props.grid[i][j].visibility != null) {
 					//console.log(props.grid[i][j].type+" "+props.grid[i][j].visibility);
 					//squareId=props.grid[i][j].type;
 					//visibility=props.grid[i][j].visibility;
