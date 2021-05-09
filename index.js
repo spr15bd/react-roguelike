@@ -399,17 +399,17 @@ class Data extends React.Component {
           					}
         				}
        				}
-				this.setState({grid:this.grid});
+				
     			}
     		} else {
       			for (var x=0; x<this.props.mapWidth; x++) {
       				for (var y=0; y<this.props.mapHeight; y++) {
         				this.grid[x][y].visibility="visible";
       				}
-				this.setState({grid:this.grid});
+				
     			}
     		}
-		//this.setState({grid:this.grid});
+		this.setState({grid:this.grid});
   	}
   	toggleDarkness() {
     		/*if (this.state.isDark){
