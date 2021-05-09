@@ -312,12 +312,12 @@ class Data extends React.Component {
           				this.movePlayer(0,1);
           				break;
       			}
-			this.updateDarkness();	// big pauses here
-			this.setState({grid:this.grid});
+			
     		}
     	}
   	movePlayer(x, y) {
-		
+		this.updateDarkness();	// big pauses here
+		this.setState({grid:this.grid});
     		let nextPlayerPositionType=this.grid[this.playerPos.x+x][this.playerPos.y+y].type;
     		if (nextPlayerPositionType=="floor"||nextPlayerPositionType=="health-container"||nextPlayerPositionType=="teleport"||nextPlayerPositionType=="weapon") {
       			this.grid[this.playerPos.x][this.playerPos.y].type="floor";
@@ -395,11 +395,11 @@ class Data extends React.Component {
         				} else {
           					this.grid[x][y].visibility="invisible";
         				}
-        				/*if ((x<=this.playerPos.x-(this.props.flashlightRadius-3)||x>=this.playerPos.x+(this.props.flashlightRadius-3))&&(y<=this.playerPos.y-(this.props.flashlightRadius-1)||y>=this.playerPos.y+this.props.flashlightRadius-1)||(y<=this.playerPos.y-(this.props.flashlightRadius-3)||y>=this.playerPos.y+(this.props.flashlightRadius-3))&&(x<=this.playerPos.x-(this.props.flashlightRadius-1)||x>=this.playerPos.x+(this.props.flashlightRadius-1))) {
+        				if ((x<=this.playerPos.x-(this.props.flashlightRadius-3)||x>=this.playerPos.x+(this.props.flashlightRadius-3))&&(y<=this.playerPos.y-(this.props.flashlightRadius-1)||y>=this.playerPos.y+this.props.flashlightRadius-1)||(y<=this.playerPos.y-(this.props.flashlightRadius-3)||y>=this.playerPos.y+(this.props.flashlightRadius-3))&&(x<=this.playerPos.x-(this.props.flashlightRadius-1)||x>=this.playerPos.x+(this.props.flashlightRadius-1))) {
           					if (x>=0 && x<this.props.mapWidth && y>=0 && y<this.props.mapHeight) {
             						this.grid[x][y].visibility="invisible";
           					}
-        				}*/
+        				}
        				}
 				
     			}
