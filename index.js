@@ -383,7 +383,7 @@ class Data extends React.Component {
       			window.scrollTo(0,0);
     		}
 		//this.updateDarkness();	// big pauses here
-		//this.setState({grid:this.grid});
+		this.setState({grid:this.grid});
    	}
   	updateDarkness() {
     		if (this.isDark) {
