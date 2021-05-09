@@ -99,7 +99,7 @@ class Data extends React.Component {
     		for (var x=0;x<this.props.mapWidth;x++) {
       			this.grid[x]=new Array(this.props.mapHeight);
     		}
-    		this.state.grid=this.grid;
+    		//this.state.grid=this.grid;
     		this.loadDungeon();
     		window.scrollTo(0,0);
   	}
@@ -269,7 +269,7 @@ class Data extends React.Component {
        				}
       			}
     		}
-    		this.setState({grid:this.grid});
+    		//this.setState({grid:this.grid});
   	}
   	createRoom(xPos, yPos, width,height) {
     		if (xPos<10||xPos>this.props.mapWidth-width-10||yPos<4||yPos>this.props.mapHeight-height) {
@@ -409,7 +409,7 @@ class Data extends React.Component {
 				
     			}
     		}
-		this.setState({grid:this.grid});
+		//this.setState({grid:this.grid});
   	}
   	toggleDarkness() {
     		/*if (this.state.isDark){
