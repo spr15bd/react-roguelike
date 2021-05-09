@@ -10,7 +10,7 @@ function Map(props) {
 					//squareId=props.grid[i][j].type;
 					//visibility=props.grid[i][j].visibility;
 					grid.push(
-						<div id={props.grid[i][j].type}>
+						<div id="wall"}>
 						//<div id={props.grid[i][j].type} className={props.grid[i][j].visibility}>
 						</div>
 					);
