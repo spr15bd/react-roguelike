@@ -313,6 +313,7 @@ class Data extends React.Component {
           				break;
       			}
 			this.updateDarkness();	// big pauses here
+			this.setState({grid:this.grid});
     		}
     	}
   	movePlayer(x, y) {
@@ -410,7 +411,7 @@ class Data extends React.Component {
 				
     			}
     		}
-		this.setState({grid:this.grid});
+		//this.setState({grid:this.grid});
   	}
   	toggleDarkness() {
     		/*if (this.state.isDark){
@@ -441,6 +442,7 @@ class Data extends React.Component {
     		//this.setState({isDark:!this.state.isDark}, this.updateDarkness());
 		this.isDark = !this.isDark;
 		this.updateDarkness();
+		this.setState({grid:this.grid});
   	}
   	// display win or lose message, reload game
   	displayMessage(message) {
