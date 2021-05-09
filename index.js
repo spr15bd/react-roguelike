@@ -316,8 +316,7 @@ class Data extends React.Component {
     		}
     	}
   	movePlayer(x, y) {
-		this.updateDarkness();	// big pauses here
-		this.setState({grid:this.grid});
+		
     		let nextPlayerPositionType=this.grid[this.playerPos.x+x][this.playerPos.y+y].type;
     		if (nextPlayerPositionType=="floor"||nextPlayerPositionType=="health-container"||nextPlayerPositionType=="teleport"||nextPlayerPositionType=="weapon") {
       			this.grid[this.playerPos.x][this.playerPos.y].type="floor";
@@ -382,7 +381,8 @@ class Data extends React.Component {
       			this.displayMessage("Game Over - Unlucky");
       			window.scrollTo(0,0);
     		}
-		//this.setState({grid:this.grid});
+		this.updateDarkness();	// big pauses here
+		this.setState({grid:this.grid});
    	}
   	updateDarkness() {
     		if (this.isDark) {
