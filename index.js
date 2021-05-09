@@ -1,5 +1,4 @@
 function Map(props) {
-	//console.log("Props in map: "+props);
   	const grid = [];
 	if (props != undefined) {
 		//console.log(props.height+" "+props.width+" "+props.grid);
@@ -7,10 +6,10 @@ function Map(props) {
 			for (var i=0; i<props.width; i++) {
 				if (props.grid[i][j].type != null & props.grid[i][j].visibility != null) {
 					//console.log(props.grid[i][j].type+" "+props.grid[i][j].visibility);
-					let squareId=props.grid[i][j].type;
-					let visibility=props.grid[i][j].visibility;
+					//squareId=props.grid[i][j].type;
+					//visibility=props.grid[i][j].visibility;
 					grid.push(
-						<div id={squareId} className={visibility}>
+						<div id={props.grid[i][j].type} className={props.grid[i][j].visibility}>
 						</div>
 					);
 				}
@@ -386,6 +385,7 @@ class Data extends React.Component {
 		//this.setState({grid:this.grid});
    	}
   	updateDarkness() {
+		/*
     		if (this.isDark) {
     			for (var x=0; x<this.props.mapWidth; x++) {
       				for (var y=0; y<this.props.mapHeight; y++) {
@@ -413,6 +413,7 @@ class Data extends React.Component {
     			}
     		}
 		//this.setState({grid:this.grid});
+		*/
   	}
   	toggleDarkness() {
     		/*if (this.state.isDark){
