@@ -311,10 +311,11 @@ class Data extends React.Component {
           				this.movePlayer(0,1);
           				break;
       			}
+			this.updateDarkness();	// big pauses here
     		}
     	}
   	movePlayer(x, y) {
-		this.updateDarkness();	// big pauses here
+		
     		let nextPlayerPositionType=this.grid[this.playerPos.x+x][this.playerPos.y+y].type;
     		if (nextPlayerPositionType=="floor"||nextPlayerPositionType=="health-container"||nextPlayerPositionType=="teleport"||nextPlayerPositionType=="weapon") {
       			this.grid[this.playerPos.x][this.playerPos.y].type="floor";
