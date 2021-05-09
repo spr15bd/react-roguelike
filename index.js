@@ -435,8 +435,8 @@ class Data extends React.Component {
       			}
     		}
 		*/
-    		this.setState({isDark:!this.state.isDark});
-		this.updateDarkness();
+    		this.setState({isDark:!this.state.isDark}, ()=> {this.updateDarkness();});
+		
   	}
   	// display win or lose message, reload game
   	displayMessage(message) {
