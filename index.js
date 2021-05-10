@@ -398,7 +398,7 @@ class Data extends React.Component {
         				}
         				if ((x<=this.playerPos.x-(this.props.flashlightRadius-3)||x>=this.playerPos.x+(this.props.flashlightRadius-3))&&(y<=this.playerPos.y-(this.props.flashlightRadius-1)||y>=this.playerPos.y+this.props.flashlightRadius-1)||(y<=this.playerPos.y-(this.props.flashlightRadius-3)||y>=this.playerPos.y+(this.props.flashlightRadius-3))&&(x<=this.playerPos.x-(this.props.flashlightRadius-1)||x>=this.playerPos.x+(this.props.flashlightRadius-1))) {
           					if (x>=0 && x<this.props.mapWidth && y>=0 && y<this.props.mapHeight) {
-            						this.grid[x][y].visibiliy="invisible";
+            						this.grid[x][y].visibility="invisible";
           					}
         				}
        				}
@@ -407,7 +407,7 @@ class Data extends React.Component {
     		} else {
       			for (var x=0; x<this.props.mapWidth; x++) {
       				for (var y=0; y<this.props.mapHeight; y++) {
-        				this.grid[x][y].type="visible";
+        				this.grid[x][y].visibility="visible";
       				}
 				
     			}
