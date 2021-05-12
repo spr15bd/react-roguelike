@@ -268,7 +268,6 @@ class Data extends React.Component {
        				}
       			}
     		}
-    		//this.setState({grid:this.grid});
   	}
   	createRoom(xPos, yPos, width,height) {
     		if (xPos<10||xPos>this.props.mapWidth-width-10||yPos<4||yPos>this.props.mapHeight-height) {
@@ -323,7 +322,6 @@ class Data extends React.Component {
       			this.playerPos.y+=y;
       			this.grid[this.playerPos.x][this.playerPos.y].type="player";
       			window.scrollBy(0, y*10);
-      			//this.setState({grid:this.grid});
       			if (nextPlayerPositionType=="health-container") {
         			this.playerHealth=parseInt(this.playerHealth)+20;
       			} else if (nextPlayerPositionType=="teleport") {
@@ -413,33 +411,7 @@ class Data extends React.Component {
 		//this.setState({grid:this.grid});
   	}
   	toggleDarkness() {
-    		/*if (this.state.isDark){
-      			for (var x=0; x<this.props.mapWidth; x++) {
-        			for (var y=0; y<this.props.mapHeight; y++) {
-          				this.grid[x][y].visibility="visible";
-        			}
-      			}
-    		} else {
-      			for (var x=0; x<this.props.mapWidth; x++) {
-        			for (var y=0; y<this.props.mapHeight; y++) {
-          				if (x>=this.playerPos.x-this.props.flashlightRadius && x<this.playerPos.x+this.props.flashlightRadius+1 && y>=this.playerPos.y-this.props.flashlightRadius && y<this.playerPos.y+this.props.flashlightRadius+1) {
-            					if (x>=0 && x<this.props.mapWidth && y>=0 && y<this.props.mapHeight) {
-              						this.grid[x][y].visibility="visible";
-            					}
-          				} else {
-            					this.grid[x][y].visibility="invisible";
-         	 			}
-					if ((x<=this.playerPos.x-(this.props.flashlightRadius-3)||x>=this.playerPos.x+(this.props.flashlightRadius-3))&&(y<=this.playerPos.y-(this.props.flashlightRadius-1)||y>=this.playerPos.y+this.props.flashlightRadius-1)||(y<=this.playerPos.y-(this.props.flashlightRadius-3)||y>=this.playerPos.y+(this.props.flashlightRadius-3))&&(x<=this.playerPos.x-(this.props.flashlightRadius-1)||x>=this.playerPos.x+(this.props.flashlightRadius-1))) {
-            					if (x>=0 && x<this.props.mapWidth && y>=0 && y<this.props.mapHeight) {
-              						this.grid[x][y].visibility="invisible";
-            					}
-          				}
-				}
-      			}
-    		}
-		*/
-    		//this.setState({isDark:!this.state.isDark}, this.updateDarkness());
-		this.isDark = !this.isDark;
+    		this.isDark = !this.isDark;
 		this.updateDarkness();
 		this.setState({grid:this.grid});
   	}
