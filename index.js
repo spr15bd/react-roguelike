@@ -378,8 +378,6 @@ class Data extends React.Component {
       			this.displayMessage("Game Over - Unlucky");
       			window.scrollTo(0,0);
     		}
-		//this.updateDarkness();	// big pauses here
-		//this.setState({grid:this.grid});
    	}
   	updateDarkness() {
     		if (this.isDark) {
