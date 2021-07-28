@@ -94,7 +94,7 @@ class Data extends React.Component {
 		*/
 		console.log("Map height: "+this.props.mapHeight);
     		this.grid=new Array(this.props.mapWidth);
-    		for (var x=0;x<this.props.mapWidth;x++) {
+    		for (let x=0;x<this.props.mapWidth;x++) {
       			this.grid[x]=new Array(this.props.mapHeight);
     		}
     		this.isDark = true;
@@ -120,8 +120,8 @@ class Data extends React.Component {
     		);
   	}
   	loadDungeon() {
-    		for (var x=0;x<this.props.mapWidth;x++) {
-      			for (var y=0;y<this.props.mapHeight;y++) {
+    		for (let x=0;x<this.props.mapWidth;x++) {
+      			for (let y=0;y<this.props.mapHeight;y++) {
         			this.grid[x][y]={
           				type: "wall",
           				visibility: "invisible"
@@ -148,7 +148,7 @@ class Data extends React.Component {
       			yPos=rooms[randomRoom][1];
       			storedWidth=rooms[randomRoom][2];
       			storedHeight=rooms[randomRoom][3];
-      			for (var x=0; x<1; x++) {
+      			for (let x=0; x<1; x++) {
         			let index=Math.floor(Math.random()*4);
         			let offset=Math.floor(Math.random()*5-2);
         			if (nextRoom[index]=="up") {
