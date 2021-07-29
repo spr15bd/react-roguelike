@@ -2,8 +2,8 @@ function Map(props) {
 	//console.log("Props in map: "+props);
   	const grid = [];
 	if (props != undefined) {
-		for (var j=0; j<props.height; j++) {
-			for (var i=0; i<props.width; i++) {
+		for (let j=0; j<props.height; j++) {
+			for (let i=0; i<props.width; i++) {
 				if (props.grid[i][j].type != null & props.grid[i][j].visibility != null) {
 					let squareId=props.grid[i][j].type;
 					let visibility=props.grid[i][j].visibility;
