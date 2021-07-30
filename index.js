@@ -272,9 +272,9 @@ class Data extends React.Component {
     		if (xPos<10||xPos>this.props.mapWidth-width-10||yPos<4||yPos>this.props.mapHeight-height) {
       			return false;
     		}
-    		// check the area this room will go is empty
-    		for (var j=0; j<height; j++) {
-      			for (var i=0; i<width; i++) {
+    		// check the area this room will go is empty - if not return false
+    		for (let j=0; j<height; j++) {
+      			for (let i=0; i<width; i++) {
         			if (this.grid[i+xPos][j+yPos].type=="floor") {
           				return false;
         			}
