@@ -273,15 +273,16 @@ class Data extends React.Component {
       			return false;
     		}
     		// check the area this room will go is empty - if not return false
-    		for (let j=0; j<height; j++) {
-      			for (let i=0; i<width; i++) {
+		let i, j;
+    		for (j=0; j<height; j++) {
+      			for (i=0; i<width; i++) {
         			if (this.grid[i+xPos][j+yPos].type=="floor") {
           				return false;
         			}
       			}
     		}
-    		for (var j=0; j<height; j++) {
-      			for (var i=0; i<width; i++) {
+    		for (j=0; j<height; j++) {
+      			for (i=0; i<width; i++) {
         			this.grid[i+xPos][j+yPos].type="floor";
       			}
     		}
