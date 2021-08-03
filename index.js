@@ -349,7 +349,7 @@ class Data extends React.Component {
       			if (this.grid[this.playerPos.x+x][this.playerPos.y+y].health <=0 ) {
         			this.xp+=10;
         			// level up if xp is high enough
-        			for (var i=0; i<this.levelUpXP.length; i++) {
+        			for (let i=0; i<this.levelUpXP.length; i++) {
           				if (this.xp>=this.levelUpXP[i]) {
             					this.level=i+1;
             				} 
