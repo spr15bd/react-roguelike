@@ -354,7 +354,7 @@ class Data extends React.Component {
             					this.level=i+1;
             				} 
         			}
-        			for (var i=this.levelUpXP.length-1; i>=0; i--) {
+        			for (let i=this.levelUpXP.length-1; i>=0; i--) {
           				if (this.xp<this.levelUpXP[i]) {
             					this.xpForNextLevel=this.levelUpXP[i]-this.xp;
           				}
