@@ -400,7 +400,7 @@ class Data extends React.Component {
     			}
     		} else {
       			for (let x=0; x<this.props.mapWidth; x++) {
-      				for (var y=0; y<this.props.mapHeight; y++) {
+      				for (let y=0; y<this.props.mapHeight; y++) {
         				this.grid[x][y].visibility="visible";
       				}
 				
