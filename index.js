@@ -1,6 +1,5 @@
 function Map(props) {
-	//console.log("Props in map: "+props);
-  	const grid = [];
+	const grid = [];
 	if (props != undefined) {
 		for (let j=0; j<props.height; j++) {
 			for (let i=0; i<props.width; i++) {
@@ -103,7 +102,6 @@ class Data extends React.Component {
   	}
   	componentWillMount() {
     		document.onkeydown = this.key.bind(this);
-		//document.addEventListener("keydown", this.key);
     		window.focus();
     		this.displayMessage=this.displayMessage.bind(this);
     		this.toggleDarkness=this.toggleDarkness.bind(this);
