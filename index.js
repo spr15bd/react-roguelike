@@ -312,7 +312,6 @@ class Data extends React.Component {
     		}
     	}
   	movePlayer(x, y) {
-		
     		let nextPlayerPositionType=this.grid[this.playerPos.x+x][this.playerPos.y+y].type;
     		if (nextPlayerPositionType=="floor"||nextPlayerPositionType=="health-container"||nextPlayerPositionType=="teleport"||nextPlayerPositionType=="weapon") {
       			this.grid[this.playerPos.x][this.playerPos.y].type="floor";
@@ -393,15 +392,13 @@ class Data extends React.Component {
             						this.grid[x][y].visibility="invisible";
           					}
         				}
-       				}
-				
+       				}	
     			}
     		} else {
       			for (let x=0; x<this.props.mapWidth; x++) {
       				for (let y=0; y<this.props.mapHeight; y++) {
         				this.grid[x][y].visibility="visible";
-      				}
-				
+      				}	
     			}
     		}
   	}
