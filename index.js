@@ -384,7 +384,7 @@ class Data extends React.Component {
 				if (x>=this.playerPos.x-this.props.flashlightRadius && x<this.playerPos.x+this.props.flashlightRadius+1) {
 					inXRange = true;
 				} else {
-					inXRange = false
+					inXRange = false;
 				}	
       				for (let y=0; y<this.props.mapHeight; y++) {
 					// only update the gridpoint if gridpoint in view
