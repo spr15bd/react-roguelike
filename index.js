@@ -3,9 +3,9 @@ function Map(props) {
 	if (props != undefined) {
 		for (let j=0; j<props.height; j++) {
 			for (let i=0; i<props.width; i++) {
-				if (props.grid[i][j].type != null & props.grid[i][j].visibility != null) {
+				if (props.grid[i][j].type != null & props.grid[i][j].isVisible != null) {
 					let squareId=props.grid[i][j].type;
-					let visibility=props.grid[i][j].visibility;
+					let visibility=props.grid[i][j].isVisible;
 					grid.push(
 						<div id={squareId} className={visibility}>
 						</div>
@@ -122,7 +122,7 @@ class Data extends React.Component {
       			for (let y=0;y<this.props.mapHeight;y++) {
         			this.grid[x][y]={
           				type: "wall",
-          				visibility: "invisible"
+          				isVisible: false
         			};
       			}
     		}
@@ -390,14 +390,14 @@ class Data extends React.Component {
 					// only update the gridpoint if gridpoint in view
         				if (inXRange && y>=this.playerPos.y-this.props.flashlightRadius && y<this.playerPos.y+this.props.flashlightRadius+1) {
           					if (x<this.props.mapWidth && y<this.props.mapHeight) {
-            						this.grid[x][y].visibility="visible";
+            						this.grid[x][y].isVisible = true;
           					}
         				} else {
-          					this.grid[x][y].visibility="invisible";
+          					this.grid[x][y].isVisible = false;
         				}
         				if ((x<=this.playerPos.x-(this.props.flashlightRadius-3)||x>=this.playerPos.x+(this.props.flashlightRadius-3))&&(y<=this.playerPos.y-(this.props.flashlightRadius-1)||y>=this.playerPos.y+this.props.flashlightRadius-1)||(y<=this.playerPos.y-(this.props.flashlightRadius-3)||y>=this.playerPos.y+(this.props.flashlightRadius-3))&&(x<=this.playerPos.x-(this.props.flashlightRadius-1)||x>=this.playerPos.x+(this.props.flashlightRadius-1))) {
           					if (x<this.props.mapWidth && y<this.props.mapHeight) {
-            						this.grid[x][y].visibility="invisible";
+            						this.grid[x][y].isVisible = false;
           					}
         				}
        				}	
@@ -405,7 +405,7 @@ class Data extends React.Component {
     		} else {
       			for (let x=0; x<this.props.mapWidth; x++) {
       				for (let y=0; y<this.props.mapHeight; y++) {
-        				this.grid[x][y].visibility="visible";
+        				this.grid[x][y].isVisible = true;
       				}	
     			}
     		}
