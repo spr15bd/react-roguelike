@@ -377,7 +377,9 @@ class Data extends React.Component {
     		}
    	}
   	updateDarkness() {
+		console.log("UpdateDarkness()";
     		if (this.isDark) {
+			console.log("isDark";
 			let inXRange = false;
 			let inYRange = false;
     			for (let x=0; x<this.props.mapWidth; x++) {
