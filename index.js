@@ -418,6 +418,7 @@ class Data extends React.Component {
   	toggleDarkness() {
     		this.isDark = !this.isDark;
 		this.updateDarkness();
+		console.log("updated darkeness - ln 421");
 		this.setState({grid:this.grid});
   	}
   	// display win or lose message, reload game
