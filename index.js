@@ -415,11 +415,12 @@ class Data extends React.Component {
     			}
     		}
   	}
-  	toggleDarkness() {
+  	async toggleDarkness() {
     		this.isDark = !this.isDark;
-		this.updateDarkness();
-		console.log("updated darkeness - ln 421");
+		await this.updateDarkness();
+		//console.log("updated darkeness - ln 421");
 		this.setState({grid:this.grid});
+		console.log("have set the state of grid");
   	}
   	// display win or lose message, reload game
   	displayMessage(message) {
