@@ -379,7 +379,6 @@ class Data extends React.Component {
   	updateDarkness() {
 		console.log("UpdateDarkness()");
     		if (this.isDark) {
-			console.log("isDark");
 			let inXRange = false;
 			let inYRange = false;
     			for (let x=0; x<this.props.mapWidth; x++) {
@@ -393,7 +392,6 @@ class Data extends React.Component {
         				if (inXRange && y>=this.playerPos.y-this.props.flashlightRadius && y<this.playerPos.y+this.props.flashlightRadius+1) {
           					if (x<this.props.mapWidth && y<this.props.mapHeight) {
             						this.grid[x][y].isVisible = true;
-							console.log("setting isVisible to: ", this.grid[x][y].isVisible);
           					}
         				} else {
           					this.grid[x][y].isVisible = false;
@@ -401,7 +399,6 @@ class Data extends React.Component {
         				if ((x<=this.playerPos.x-(this.props.flashlightRadius-3)||x>=this.playerPos.x+(this.props.flashlightRadius-3))&&(y<=this.playerPos.y-(this.props.flashlightRadius-1)||y>=this.playerPos.y+this.props.flashlightRadius-1)||(y<=this.playerPos.y-(this.props.flashlightRadius-3)||y>=this.playerPos.y+(this.props.flashlightRadius-3))&&(x<=this.playerPos.x-(this.props.flashlightRadius-1)||x>=this.playerPos.x+(this.props.flashlightRadius-1))) {
           					if (x<this.props.mapWidth && y<this.props.mapHeight) {
             						this.grid[x][y].isVisible = false;
-							console.log("setting isVisible to: ", this.grid[x][y].isVisible);
           					}
         				}
        				}	
@@ -410,7 +407,6 @@ class Data extends React.Component {
       			for (let x=0; x<this.props.mapWidth; x++) {
       				for (let y=0; y<this.props.mapHeight; y++) {
         				this.grid[x][y].isVisible = true;
-					console.log("ELSE - setting isVisible to: ", this.grid[x][y].isVisible);
       				}	
     			}
     		}
