@@ -376,9 +376,8 @@ class Data extends React.Component {
       			window.scrollTo(0,0);
     		}
    	}
-  	updateDarkness() {
-		console.log("UpdateDarkness()");
-    		if (this.isDark) {
+  	async updateDarkness() {
+		if (this.isDark) {
 			let inXRange = false;
 			let inYRange = false;
     			for (let x=0; x<this.props.mapWidth; x++) {
@@ -414,7 +413,6 @@ class Data extends React.Component {
   	async toggleDarkness() {
     		this.isDark = !this.isDark;
 		await this.updateDarkness();
-		//console.log("updated darkeness - ln 421");
 		this.setState({grid:this.grid});
 		console.log("have set the state of grid");
   	}
