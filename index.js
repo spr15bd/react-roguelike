@@ -414,7 +414,7 @@ class Data extends React.Component {
     		this.isDark = !this.isDark;
 		await this.updateDarkness();
 		this.setState({grid:this.grid});
-		console.log("have set the state of grid");
+		console.log("have set the state of grid: ", this.state.grid);
   	}
   	// display win or lose message, reload game
   	displayMessage(message) {
