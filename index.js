@@ -289,7 +289,7 @@ class Data extends React.Component {
   	createDoor(xPos, yPos) {
     		this.grid[xPos][yPos].type="floor";
   	}
-  	key(event) {
+  	async key(event) {
     		if (!this.state.keyBoardLocked) { 
 			switch(event.keyCode) {
         			case 37 :
@@ -307,7 +307,7 @@ class Data extends React.Component {
           				this.movePlayer(0,1);
           				break;
       			}
-			this.updateDarkness();	// big pauses here
+			await this.updateDarkness();	// big pauses here
 			this.setState({grid:this.grid});
     		}
     	}
