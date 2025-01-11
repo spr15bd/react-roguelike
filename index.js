@@ -389,9 +389,7 @@ class Data extends React.Component {
       				for (let y=0; y<this.props.mapHeight; y++) {
 					// only update the gridpoint if gridpoint in view
         				if (inXRange && y>=this.playerPos.y-this.props.flashlightRadius && y<this.playerPos.y+this.props.flashlightRadius+1) {
-          					if (x<this.props.mapWidth && y<this.props.mapHeight) {
-            						this.grid[x][y].isVisible = true;
-          					}
+          					this.grid[x][y].isVisible = true;
         				} else {
           					this.grid[x][y].isVisible = false;
         				}
@@ -414,7 +412,6 @@ class Data extends React.Component {
     		this.isDark = !this.isDark;
 		await this.updateDarkness();
 		this.setState({grid:this.grid});
-		console.log("have set the state of grid: ", this.state.grid);
   	}
   	// display win or lose message, reload game
   	displayMessage(message) {
