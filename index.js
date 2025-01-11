@@ -394,9 +394,7 @@ class Data extends React.Component {
           					this.grid[x][y].isVisible = false;
         				}
         				if ((x<=this.playerPos.x-(this.props.flashlightRadius-3)||x>=this.playerPos.x+(this.props.flashlightRadius-3))&&(y<=this.playerPos.y-(this.props.flashlightRadius-1)||y>=this.playerPos.y+this.props.flashlightRadius-1)||(y<=this.playerPos.y-(this.props.flashlightRadius-3)||y>=this.playerPos.y+(this.props.flashlightRadius-3))&&(x<=this.playerPos.x-(this.props.flashlightRadius-1)||x>=this.playerPos.x+(this.props.flashlightRadius-1))) {
-          					if (x<this.props.mapWidth && y<this.props.mapHeight) {
-            						this.grid[x][y].isVisible = false;
-          					}
+          					this.grid[x][y].isVisible = false;
         				}
        				}	
     			}
