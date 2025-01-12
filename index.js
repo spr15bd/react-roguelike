@@ -17,7 +17,7 @@ function Map(props) {
   	return(
     		<div>
       			<div id="map">
-        			{grid}test
+        			{grid}
       			</div>
     		</div>
   	);
@@ -73,7 +73,7 @@ class Data extends React.Component {
       			message:"",
       			keyBoardLocked:false,
       			isDark:true,
-      			grid:[[]]
+      			grid:[[[]]]
     		};
     		this.displayMessage=this.displayMessage.bind(this);
     		this.toggleDarkness=this.toggleDarkness.bind(this);
