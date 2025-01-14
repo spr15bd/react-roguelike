@@ -3,7 +3,7 @@ function Map(props) {
 	if (props != undefined) {
 		for (let j=0; j<props.height; j++) {
 			for (let i=0; i<props.width; i++) {
-				if (props.grid[i][j]['type'] != null & props.grid[i][j]['isVisible'] != null) {
+				if (props.grid[i][j] != null) {
 					let squareId=props.grid[i][j].type;
 					let visibility=props.grid[i][j].isVisible;
 					grid.push(
