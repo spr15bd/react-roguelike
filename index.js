@@ -73,7 +73,7 @@ class Data extends React.Component {
       			message:"",
       			keyBoardLocked:false,
       			isDark:true,
-      			grid:[[[]]]
+      			grid:[[[]]]{ type: null, isVisible: null }
     		};
     		this.displayMessage=this.displayMessage.bind(this);
     		this.toggleDarkness=this.toggleDarkness.bind(this);
