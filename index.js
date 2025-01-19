@@ -17,7 +17,7 @@ function Map(props) {
   	return(
     		<div>
       			<div id="map">
-        			{grid}
+        			{props.grid}
       			</div>
     		</div>
   	);
