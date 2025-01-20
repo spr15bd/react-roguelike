@@ -17,7 +17,7 @@ function Map(props) {
   	return(
     		<div>
       			<div id="map">
-        			{props.grid}
+        			{grid}
       			</div>
     		</div>
   	);
@@ -114,7 +114,7 @@ class Data extends React.Component {
       			<div>
         			<Status playerHealth={this.playerHealth} weapon={this.weapon} attack={this.attack} dungeon={this.dungeon} level={this.level} xp={this.xp} nextLevel={this.xpForNextLevel} darknessOnOff={this.toggleDarkness}/>
         			<Modal messageVisible={this.state.messageVisible} message={this.state.message}/>
-        			<Map width={this.props.mapWidth} height={this.props.mapHeight} grid={this.grid}/>
+        			<Map width={this.props.mapWidth} height={this.props.mapHeight} grid={this.state.grid}/>
       			</div>
     		);
   	}
