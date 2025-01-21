@@ -114,7 +114,7 @@ class Data extends React.Component {
       			<div>
         			<Status playerHealth={this.playerHealth} weapon={this.weapon} attack={this.attack} dungeon={this.dungeon} level={this.level} xp={this.xp} nextLevel={this.xpForNextLevel} darknessOnOff={this.toggleDarkness}/>
         			<Modal messageVisible={this.state.messageVisible} message={this.state.message}/>
-        			<Map width={this.props.mapWidth} height={this.props.mapHeight} grid={this.state.grid}/>
+        			<Map width={this.props.mapWidth} height={this.props.mapHeight} grid={this.grid}/>
       			</div>
     		);
   	}
@@ -267,7 +267,7 @@ class Data extends React.Component {
       			}
     		}
   	}
-  	createRoom(xPos, yPos, width,height) {
+  	createRoom(xPos, yPos, width, height) {
     		if (xPos<10||xPos>this.props.mapWidth-width-10||yPos<4||yPos>this.props.mapHeight-height) {
       			return false;
     		}
@@ -344,7 +344,7 @@ class Data extends React.Component {
       			this.grid[this.playerPos.x+x][this.playerPos.y+y].health-=this.attack*Math.round(Math.random()*7);
       			this.playerHealth-=Math.round(Math.random()*20);
       			//if a monster has been slain, increase player's xp
-      			if (this.grid[this.playerPos.x+x][this.playerPos.y+y].health <=0 ) {
+      			if (this.grid[this.playerPos.x+x][this.playerPos.y+y].health <= 0 ) {
         			this.xp+=10;
         			// level up if xp is high enough
         			for (let i=0; i<this.levelUpXP.length; i++) {
