@@ -408,6 +408,7 @@ class Data extends React.Component {
     		}
   	}
   	async toggleDarkness() {
+		console.log("Toggle darkness");
     		this.isDark = !this.isDark;
 		await this.updateDarkness();
 		this.setState({grid:this.grid});
