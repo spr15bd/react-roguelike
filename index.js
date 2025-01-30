@@ -7,7 +7,7 @@ function Map(props) {
 					let squareId=props.grid[i][j].type;
 					let visibility=props.grid[i][j].isVisible;
 					grid.push(
-						<div id={squareId} className={visibility}>
+						<div id={squareId} className={visibility?"visible":"invisible"}>
 						</div>
 					);
 				}
