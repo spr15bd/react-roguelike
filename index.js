@@ -394,9 +394,9 @@ class Data extends React.Component {
         				} else {
           					this.grid[x][y].isVisible = false;
         				}
-        				/*if ((x<=this.playerPos.x-(this.props.flashlightRadius-3)||x>=this.playerPos.x+(this.props.flashlightRadius-3))&&(y<=this.playerPos.y-(this.props.flashlightRadius-1)||y>=this.playerPos.y+this.props.flashlightRadius-1)||(y<=this.playerPos.y-(this.props.flashlightRadius-3)||y>=this.playerPos.y+(this.props.flashlightRadius-3))&&(x<=this.playerPos.x-(this.props.flashlightRadius-1)||x>=this.playerPos.x+(this.props.flashlightRadius-1))) {
+        				if ((x<=this.playerPos.x-(this.props.flashlightRadius-3)||x>=this.playerPos.x+(this.props.flashlightRadius-3))&&(y<=this.playerPos.y-(this.props.flashlightRadius-1)||y>=this.playerPos.y+this.props.flashlightRadius-1)||(y<=this.playerPos.y-(this.props.flashlightRadius-3)||y>=this.playerPos.y+(this.props.flashlightRadius-3))&&(x<=this.playerPos.x-(this.props.flashlightRadius-1)||x>=this.playerPos.x+(this.props.flashlightRadius-1))) {
           					this.grid[x][y].isVisible = false;
-        				}*/
+        				}
        				}
     			}
     		} else {
@@ -409,10 +409,8 @@ class Data extends React.Component {
   	}
   	async toggleDarkness() {
     		this.isDark = !this.isDark;
-		console.log("Toggle darkness: ", this.isDark);
 		await this.updateDarkness();
 		this.setState({grid:this.grid});
-		console.log("Current state: ", this.state.grid);
   	}
   	// display win or lose message, reload game
   	displayMessage(message) {
