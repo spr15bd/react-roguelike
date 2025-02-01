@@ -309,7 +309,7 @@ class Data extends React.Component {
           				break;
       			}
 			await this.updateDarkness();	// big pauses here
-			this.setState({grid:this.grid});
+			//this.setState({grid:this.grid});
     		}
     	}
   	movePlayer(x, y) {
