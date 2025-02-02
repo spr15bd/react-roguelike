@@ -309,7 +309,7 @@ class Data extends React.Component {
           				break;
       			}
 			await this.updateDarkness();	// big pauses here
-			//this.setState({grid:this.grid});
+			this.setState({grid:this.grid});
     		}
     	}
   	movePlayer(x, y) {
@@ -391,9 +391,9 @@ class Data extends React.Component {
 					// only update the gridpoint if gridpoint in view
         				if (inXRange && y>=this.playerPos.y-this.props.flashlightRadius && y<this.playerPos.y+this.props.flashlightRadius+1) {
           					this.grid[x][y].isVisible = true;
-        				} else {
+        				} /*else {
           					this.grid[x][y].isVisible = false;
-        				}
+        				}*/
         				if ((x<=this.playerPos.x-(this.props.flashlightRadius-3)||x>=this.playerPos.x+(this.props.flashlightRadius-3))&&(y<=this.playerPos.y-(this.props.flashlightRadius-1)||y>=this.playerPos.y+this.props.flashlightRadius-1)||(y<=this.playerPos.y-(this.props.flashlightRadius-3)||y>=this.playerPos.y+(this.props.flashlightRadius-3))&&(x<=this.playerPos.x-(this.props.flashlightRadius-1)||x>=this.playerPos.x+(this.props.flashlightRadius-1))) {
           					this.grid[x][y].isVisible = false;
         				}
