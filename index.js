@@ -391,7 +391,7 @@ class Data extends React.Component {
 					// only update the gridpoint if gridpoint in view
 					this.grid[x][y].isVisible = true;
         				if (inXRange && y<this.playerPos.y-this.props.flashlightRadius || y>=this.playerPos.y+this.props.flashlightRadius+1) {
-          					this.grid[x][y].isVisible = falsee;
+          					this.grid[x][y].isVisible = false;
         				} 
         				if ((x<=this.playerPos.x-(this.props.flashlightRadius-3)||x>=this.playerPos.x+(this.props.flashlightRadius-3))&&(y<=this.playerPos.y-(this.props.flashlightRadius-1)||y>=this.playerPos.y+this.props.flashlightRadius-1)||(y<=this.playerPos.y-(this.props.flashlightRadius-3)||y>=this.playerPos.y+(this.props.flashlightRadius-3))&&(x<=this.playerPos.x-(this.props.flashlightRadius-1)||x>=this.playerPos.x+(this.props.flashlightRadius-1))) {
           					this.grid[x][y].isVisible = false;
