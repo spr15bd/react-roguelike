@@ -95,7 +95,7 @@ class Data extends React.Component {
     		this.grid=new Array(this.props.mapWidth);
     		for (let x=0;x<this.props.mapWidth;x++) {
       			//this.grid[x]=new Array(this.props.mapHeight);
-			this.grid[x] = [{ type: "", isVisible: false }];
+			this.grid[x] = [{ type: "", isVisible: true }];
     		}
     		this.isDark = true;
     		this.loadDungeon();
