@@ -385,6 +385,7 @@ class Data extends React.Component {
 					inXRange = true;
 				} else {
 					inXRange = false;
+					this.grid[x][y].isVisible = false;
 				}	
       				for (let y=0; y<this.props.mapHeight; y++) {
 					// only update the gridpoint if gridpoint in view
