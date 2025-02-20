@@ -377,25 +377,20 @@ class Data extends React.Component {
     		}
    	}
   	async updateDarkness() {
-		if (this.isDark) {
-			let inXRange = false;
-			let inYRange = false;
+    		if (this.isDark) {
     			for (let x=0; x<this.props.mapWidth; x++) {
-				if (x>=this.playerPos.x-this.props.flashlightRadius && x<this.playerPos.x+this.props.flashlightRadius+1) {
-					inXRange = true;
-				} else {
-					inXRange = false;
-				}	
       				for (let y=0; y<this.props.mapHeight; y++) {
-					// only update the gridpoint if gridpoint in view
-					
-        				if (inXRange && y<this.playerPos.y-this.props.flashlightRadius || y>=this.playerPos.y+this.props.flashlightRadius+1) {
-          					this.grid[x][y].isVisible = false;
-        				} else if (!inXRange) {
-						this.grid[x][y].isVisible = true;
-					}
+        				if (x>=this.playerPos.x-this.props.flashlightRadius && x<this.playerPos.x+this.props.flashlightRadius+1 && y>=this.playerPos.y-this.props.flashlightRadius && y<this.playerPos.y+this.props.flashlightRadius+1) {
+          					if (x>=0 && x<this.props.mapWidth && y>=0 && y<this.props.mapHeight) {
+            						this.grid[x][y].visibility="visible";
+          					}
+        				} else {
+          					this.grid[x][y].visibility="invisible";
+        				}
         				if ((x<=this.playerPos.x-(this.props.flashlightRadius-3)||x>=this.playerPos.x+(this.props.flashlightRadius-3))&&(y<=this.playerPos.y-(this.props.flashlightRadius-1)||y>=this.playerPos.y+this.props.flashlightRadius-1)||(y<=this.playerPos.y-(this.props.flashlightRadius-3)||y>=this.playerPos.y+(this.props.flashlightRadius-3))&&(x<=this.playerPos.x-(this.props.flashlightRadius-1)||x>=this.playerPos.x+(this.props.flashlightRadius-1))) {
-          					this.grid[x][y].isVisible = false;
+          					if (x>=0 && x<this.props.mapWidth && y>=0 && y<this.props.mapHeight) {
+            						this.grid[x][y].visibility="invisible";
+          					}
         				}
        				}
     			}
