@@ -5,9 +5,8 @@ function Map(props) {
 			for (let i=0; i<props.width; i++) {
 				if (props.grid[i][j] != null) {
 					let squareId=props.grid[i][j].type;
-					let visibility=props.grid[i][j].isVisible;
 					grid.push(
-						<div id={squareId} className={visibility?"visible":"invisible"}>
+						<div id={squareId} className={props.grid[i][j].isVisible?"visible":"invisible"}>
 						</div>
 					);
 				}
@@ -382,10 +381,10 @@ class Data extends React.Component {
       				for (let y=0; y<this.props.mapHeight; y++) {
         				if (x>=this.playerPos.x-this.props.flashlightRadius && x<this.playerPos.x+this.props.flashlightRadius+1 && y>=this.playerPos.y-this.props.flashlightRadius && y<this.playerPos.y+this.props.flashlightRadius+1) {
           					if (x>=0 && x<this.props.mapWidth && y>=0 && y<this.props.mapHeight) {
-            						this.grid[x][y].visibility=true;
+            						this.grid[x][y].isVisible=true;
           					}
         				} else {
-          					this.grid[x][y].isVisible="invisible";
+          					this.grid[x][y].isVisible=false;
         				}
         				if ((x<=this.playerPos.x-(this.props.flashlightRadius-3)||x>=this.playerPos.x+(this.props.flashlightRadius-3))&&(y<=this.playerPos.y-(this.props.flashlightRadius-1)||y>=this.playerPos.y+this.props.flashlightRadius-1)||(y<=this.playerPos.y-(this.props.flashlightRadius-3)||y>=this.playerPos.y+(this.props.flashlightRadius-3))&&(x<=this.playerPos.x-(this.props.flashlightRadius-1)||x>=this.playerPos.x+(this.props.flashlightRadius-1))) {
           					if (x>=0 && x<this.props.mapWidth && y>=0 && y<this.props.mapHeight) {
