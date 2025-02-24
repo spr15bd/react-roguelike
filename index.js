@@ -377,8 +377,8 @@ class Data extends React.Component {
    	}
   	async updateDarkness() {
     		if (this.isDark) {
-    			for (let x=0; x<this.props.mapWidth; x++) {
-      				for (let y=0; y<this.props.mapHeight; y++) {
+    			for (let x=0; x<this.props.mapWidth; ++x) {
+      				for (let y=0; y<this.props.mapHeight; ++y) {
         				if (x>=this.playerPos.x-this.props.flashlightRadius && x<this.playerPos.x+this.props.flashlightRadius+1 && y>=this.playerPos.y-this.props.flashlightRadius && y<this.playerPos.y+this.props.flashlightRadius+1) {
           					if (x>=0 && x<this.props.mapWidth && y>=0 && y<this.props.mapHeight) {
             						this.grid[x][y].isVisible=true;
