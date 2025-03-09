@@ -370,8 +370,8 @@ class Data extends React.Component {
     		}
     		
     		// if the player's health is 0, game over
-    		if (this.playerHealth<=0) {
-      			this.displayMessage("Game Over - Unlucky");
+    		if (this.playerHealth <= 0) {
+      			this.displayMessage("Game Over - Bad luck try again");
       			window.scrollTo(0,0);
     		}
    	}
