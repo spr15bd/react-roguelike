@@ -76,7 +76,7 @@ class Data extends React.Component {
     		};
     		this.displayMessage=this.displayMessage.bind(this);
     		this.toggleDarkness=this.toggleDarkness.bind(this);
-    		this.updateDarkness=this.updateDarkness.bind(this);
+    		this.updateMap=this.updateMap.bind(this);
     		this.playerHealth=this.props.playerHealth;
     		this.bossHealth=100;
     		this.weapon="gloves";
@@ -104,8 +104,8 @@ class Data extends React.Component {
     		window.focus();
     		this.displayMessage=this.displayMessage.bind(this);
     		this.toggleDarkness=this.toggleDarkness.bind(this);
-    		this.updateDarkness=this.updateDarkness.bind(this);
-		this.updateDarkness();
+    		this.updateMap=this.updateMap.bind(this);
+		this.updateMap();
    	}
   	render() {
     		return(
@@ -192,7 +192,7 @@ class Data extends React.Component {
       			};
       			if (this.grid[this.playerPos.x][this.playerPos.y].type=="floor") {
         			this.grid[this.playerPos.x][this.playerPos.y].type="player";
-        			//this.updateDarkness();
+        			//this.updateMap();
         			playerSpawned=true;
       			}
     		}
@@ -306,7 +306,7 @@ class Data extends React.Component {
           				this.movePlayer(0,1);
           				break;
       			}
-			await this.updateDarkness();	// big pauses here
+			await this.updateMap();	// big pauses here
 			//this.setState({grid:this.grid});
     		}
     	}
@@ -375,7 +375,7 @@ class Data extends React.Component {
       			window.scrollTo(0,0);
     		}
    	}
-  	async updateDarkness() {
+  	async updateMap() {
     		if (this.isDark) {
     			for (let x=0; x<this.props.mapWidth; ++x) {
       				for (let y=0; y<this.props.mapHeight; ++y) {
@@ -404,7 +404,7 @@ class Data extends React.Component {
   	}
   	async toggleDarkness() {
     		this.isDark = !this.isDark;
-		await this.updateDarkness();
+		await this.updateMap();
 		this.setState({grid:this.grid});
   	}
   	// display win or lose message, reload game
