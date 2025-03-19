@@ -293,6 +293,7 @@ class Data extends React.Component {
 			switch(event.keyCode) {
         			case 37 :
           				this.movePlayer(-1, 0);
+					this.grid[this.playerPos.x + this.props.flashlightRadius][this.playerPos.y].isVisible = false
           				break;
         			case 39 :
           				this.movePlayer(1, 0);
