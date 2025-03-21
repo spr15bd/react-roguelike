@@ -297,14 +297,17 @@ class Data extends React.Component {
           				break;
         			case 39 :
           				this.movePlayer(1, 0);
+					this.grid[this.playerPos.x - this.props.flashlightRadius][this.playerPos.y].isVisible = false
           				break;
         			case 38 : 
           				event.preventDefault();
           				this.movePlayer(0, -1);
+					this.grid[this.playerPos.x][this.playerPos.y - this.props.flashlightRadius].isVisible = false
           				break;
         			case 40 :
           				event.preventDefault();
           				this.movePlayer(0,1);
+					this.grid[this.playerPos.x][this.playerPos.y + this.props.flashlightRadius].isVisible = false
           				break;
       			}
 			await this.updateMap();	// big pauses here
