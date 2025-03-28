@@ -91,6 +91,7 @@ class Data extends React.Component {
     			The grid is passed to the <Map/> component
 		*/
 		console.log("Map height: "+this.props.mapHeight);
+		this.grid = [[{ type: "", isVisible: false }]];
 		for (let x=0;x<this.props.mapWidth;x++) {
       			for (let y=0;y<this.props.mapHeight;y++) {
         			this.grid[x][y]={
