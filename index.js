@@ -72,7 +72,7 @@ class Data extends React.Component {
       			message:"",
       			keyBoardLocked:false,
       			isDark:true,
-      			grid:[[[{ type: "", isVisible: false }]]]
+      			grid:[[{ type: "", isVisible: false }]]
     		};
     		this.displayMessage=this.displayMessage.bind(this);
     		this.toggleDarkness=this.toggleDarkness.bind(this);
@@ -142,7 +142,7 @@ class Data extends React.Component {
     		let storedHeight=roomHeight;
     		let randomRoom=0;
     		let nextRoom = ["up","down","left","right"];
-    		//Draw the rest of the rooms
+    		// Draw the rest of the rooms
     		while (rooms.length<21) {
       			randomRoom=Math.round(Math.random()*(rooms.length-1));
       			xPos=rooms[randomRoom][0];
