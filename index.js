@@ -98,7 +98,7 @@ class Data extends React.Component {
 			for (let y=0;y<this.props.mapHeight;++y) {
 				this.grid[x][y].isVisible = false;
 			}
-    		*/}
+    		}*/
     		this.isDark = true;
     		this.loadDungeon();
     		window.scrollTo(0,0);
