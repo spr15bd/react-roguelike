@@ -194,8 +194,8 @@ class Data extends React.Component {
         			x:Math.round(Math.random()*this.props.mapWidth/2),
         			y:Math.round(20+Math.random()*10)//(this.props.mapHeight-1))
       			};
-      			if (this.grid[this.playerPos.x][this.playerPos.y].type=="floor") {
-        			this.grid[this.playerPos.x][this.playerPos.y].type="player";
+      			if (this.grid[this.playerPos.x][this.playerPos.y]?.type=="floor") {
+        			this.grid[this.playerPos.x][this.playerPos.y]?.type="player";
         			//this.updateMap();
         			playerSpawned=true;
       			}
