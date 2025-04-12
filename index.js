@@ -93,12 +93,12 @@ class Data extends React.Component {
 		console.log("Map height: "+this.props.mapHeight);
     		//this.grid=new Array(this.props.mapWidth);
 		this.grid = [[{ type: "", isVisible: false }]]
-    		/*for (let x=0;x<this.props.mapWidth;++x) {
+    		for (let x=0;x<this.props.mapWidth;++x) {
 			//this.grid[x]=new Array(this.props.mapHeight);
 			for (let y=0;y<this.props.mapHeight;++y) {
-				this.grid[x][y].isVisible = false;
+				this.grid[x][y] = { type: "", isVisible: false };
 			}
-    		}*/
+    		/
     		this.isDark = true;
     		this.loadDungeon();
     		window.scrollTo(0,0);
@@ -194,8 +194,8 @@ class Data extends React.Component {
         			x:Math.round(Math.random()*this.props.mapWidth/2),
         			y:Math.round(20+Math.random()*10)//(this.props.mapHeight-1))
       			};
-      			if (this.grid[this.playerPos.x][this.playerPos.y]?.type=="floor") {
-        			this.grid[this.playerPos.x][this.playerPos.y]?.type="player";
+      			if (this.grid[this.playerPos.x][this.playerPos.y].type=="floor") {
+        			this.grid[this.playerPos.x][this.playerPos.y].type="player";
         			//this.updateMap();
         			playerSpawned=true;
       			}
