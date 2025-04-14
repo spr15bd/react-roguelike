@@ -99,6 +99,7 @@ class Data extends React.Component {
 				this.grid[x][y] = { type: "", isVisible: false };
 			}
 		}
+		console.log("initialised grid");
     		this.isDark = true;
     		this.loadDungeon();
     		window.scrollTo(0,0);
