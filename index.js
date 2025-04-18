@@ -399,11 +399,12 @@ class Data extends React.Component {
       				}	
     			}
     		}
+		this.setState({grid:this.grid});
   	}
   	async toggleDarkness() {
     		this.isDark = !this.isDark;
 		await this.updateMap();
-		this.setState({grid:this.grid});
+		//this.setState({grid:this.grid});
   	}
   	// display win or lose message, reload game
   	displayMessage(message) {
