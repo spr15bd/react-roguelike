@@ -402,10 +402,14 @@ class Data extends React.Component {
 		this.setState({grid:this.grid});
   	}
   	async toggleDarkness() {
+		resetGrid();
     		this.isDark = !this.isDark;
 		await this.updateMap();
 		//this.setState({grid:this.grid});
   	}
+	async resetGrid() {
+
+	}
   	// display win or lose message, reload game
   	displayMessage(message) {
     		this.setState({keyBoardLocked:true});
