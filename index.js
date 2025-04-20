@@ -90,10 +90,8 @@ class Data extends React.Component {
     			The grid is cleared whenever a new dungeon is loaded
     			The grid is passed to the <Map/> component
 		*/
-		console.log("Map height: "+this.props.mapHeight);
 		this.grid = [];
-		console.log("initialising grid.....");
-    		for (let x=0;x<this.props.mapWidth;++x) {
+		for (let x=0;x<this.props.mapWidth;++x) {
 			this.grid[x]=[];
 			for (let y=0;y<this.props.mapHeight;++y) {
 				this.grid[x][y] = { type: "", isVisible: false };
