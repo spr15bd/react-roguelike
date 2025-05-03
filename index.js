@@ -8,7 +8,7 @@ function Map(props) {
 					grid.push(
 						<div id={squareId} className={props.grid[i][j].isVisible?"visible":"invisible"}>
 						</div>
-					);
+					)
 				}
 			}
 		}
