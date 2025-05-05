@@ -3,10 +3,10 @@ function Map(props) {
 	if (props != undefined) {
 		for (let j=0; j<props.height; j++) {
 			for (let i=0; i<props.width; i++) {
-				if (props.grid[i][j] != null) {
-					let squareId=props.grid[i][j].type;
+				//if (props.grid[i][j] != null) {
+					let squareId=props.grid[i][j]?.type;
 					grid.push(
-						<div id={squareId} className={props.grid[i][j].isVisible?"visible":"invisible"}>
+						<div id={squareId} className={props.grid[i][j]?.isVisible?"visible":"invisible"}>
 						</div>
 					)
 				}
