@@ -4,9 +4,9 @@ function Map(props) {
 		for (let j=0; j<props.height; j++) {
 			for (let i=0; i<props.width; i++) {
 				//if (props.grid[i][j] != null) {
-					let squareId=props.grid[i][j]?.type;
+					let squareId=props.grid[i][j].type
 					grid.push(
-						<div id={squareId} className={props.grid[i][j]?.isVisible?"visible":"invisible"}>
+						<div id={squareId} className={props.grid[i][j].isVisible?"visible":"invisible"}>
 						</div>
 					)
 				}
@@ -19,7 +19,7 @@ function Map(props) {
         			{grid}
       			</div>
     		</div>
-  	);
+  	)
 }
 
 class Status extends React.Component {
