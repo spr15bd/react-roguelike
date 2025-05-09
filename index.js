@@ -384,7 +384,7 @@ class Data extends React.Component {
    	}
   	async updateMap() {
     		if (this.isDark) {
-			this.resetGrid();
+			//this.resetGrid();
     			for (let x=this.playerPos.x-this.props.flashlightRadius; x<this.playerPos.x+this.props.flashlightRadius+1; ++x) {
       				for (let y=this.playerPos.y-this.props.flashlightRadius; y<this.playerPos.y+this.props.flashlightRadius+1; ++y) {
         				this.grid[x][y].isVisible=true;
