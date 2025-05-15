@@ -386,9 +386,9 @@ class Data extends React.Component {
     		if (this.isDark) {
 			//this.resetGrid();
     			//for (let x=this.playerPos.x-this.props.flashlightRadius; x<this.playerPos.x+this.props.flashlightRadius+1; ++x) {
-			for (let x=0; x<this.playerPos.x+this.props.flashlightRadius+1; ++x) {	
+			for (let x=this.playerPos.x-(this.props.flashlightRadius+1); x<this.playerPos.x+this.props.flashlightRadius+1; ++x) {	
       				//for (let y=this.playerPos.y-this.props.flashlightRadius; y<this.playerPos.y+this.props.flashlightRadius+1; ++y) {
-				for (let y=0; y<this.playerPos.y+this.props.flashlightRadius+1; ++y) {
+				for (let y=this.playerPos.y-(this.props.flashlightRadius+1); y<this.playerPos.y+this.props.flashlightRadius+1; ++y) {
         				this.grid[x][y].isVisible=true;
 
 					if ((x<=this.playerPos.x-(this.props.flashlightRadius-3)||x>=this.playerPos.x+(this.props.flashlightRadius-3))&&(y<=this.playerPos.y-(this.props.flashlightRadius-1)||y>=this.playerPos.y+this.props.flashlightRadius-1)||(y<=this.playerPos.y-(this.props.flashlightRadius-3)||y>=this.playerPos.y+(this.props.flashlightRadius-3))&&(x<=this.playerPos.x-(this.props.flashlightRadius-1)||x>=this.playerPos.x+(this.props.flashlightRadius-1))) {
