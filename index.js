@@ -45,7 +45,7 @@ class Status extends React.Component {
         			</div>
         			<div className="player-property">Dungeon: {this.props.dungeon}
         			</div>
-        			<div id="darkness"><button type="button" id="darkness-control"  onClick={() => this.handleButtonClick()}/*{(e) =>this.props.darknessOnOff(e)}*/>Toggle Darkness</button>
+        			<div id="darkness"><button type="button" id="darkness-control"  onClick={() => this.handleButtonClick()}>Toggle Darkness</button>
         			</div>
       			</div>
     		);
