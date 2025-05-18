@@ -412,7 +412,6 @@ class Data extends React.Component {
 		//this.resetGrid();
     		this.isDark = !this.isDark;
 		await this.updateMap();
-		//this.setState({grid:this.grid});
   	}
 	async resetGrid() {
 		for (let x=0; x<this.props.mapWidth; x++) {
