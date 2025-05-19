@@ -391,7 +391,7 @@ class Data extends React.Component {
 				for (let y=this.playerPos.y-(this.props.flashlightRadius+1); y<this.playerPos.y+this.props.flashlightRadius+1; ++y) {
         				this.grid[x][y].isVisible=true;
 
-					if ((x<=this.playerPos.x-(this.props.flashlightRadius-3)||x>=this.playerPos.x+(this.props.flashlightRadius-3))&&(y<=this.playerPos.y-(this.props.flashlightRadius-1)||y>=this.playerPos.y+this.props.flashlightRadius-1)||(y<=this.playerPos.y-(this.props.flashlightRadius-3)||y>=this.playerPos.y+(this.props.flashlightRadius-3))&&(x<=this.playerPos.x-(this.props.flashlightRadius-1)||x>=this.playerPos.x+(this.props.flashlightRadius-1))) {
+					if ((x<=this.playerPos.x-(this.props.flashlightRadius-3)||x>=this.playerPos.x+(this.props.flashlightRadius-3))&&(y<=this.playerPos.y-(this.props.flashlightRadius-3)||y>=this.playerPos.y+this.props.flashlightRadius-3)||(y<=this.playerPos.y-(this.props.flashlightRadius-3)||y>=this.playerPos.y+(this.props.flashlightRadius-3))&&(x<=this.playerPos.x-(this.props.flashlightRadius-1)||x>=this.playerPos.x+(this.props.flashlightRadius-1))) {
 						this.grid[x][y].isVisible=false;
 					} else {
 						this.grid[x][y].isVisible=true;
@@ -409,8 +409,7 @@ class Data extends React.Component {
 		this.setState({grid:this.grid});
   	}
   	async toggleDarkness() {
-		//this.resetGrid();
-    		this.isDark = !this.isDark;
+		this.isDark = !this.isDark;
 		await this.updateMap();
   	}
 	async resetGrid() {
