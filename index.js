@@ -413,11 +413,18 @@ class Data extends React.Component {
 		await this.updateMap();
   	}
 	async resetGrid() {
-		for (let x=0; x<this.props.mapWidth; x++) {
+		/*for (let x=0; x<this.props.mapWidth; x++) {
       			for (let y=0; y<this.props.mapHeight; y++) {
         			this.grid[x][y].isVisible = false;
       			}
-		}
+		}*/
+		for (let x=0; x<this.props.mapWidth; x++) {
+			this.grid[x][0].isVisible = false;
+			this.grid[x][this.props.mapHeight].isVisible = false;
+      		for (let y=0; y<this.props.mapHeight; y++) {
+        		this.grid[0][y].isVisible = false;
+			this.grid[this.props.mapWidth][y].isVisible = false;
+      		}
 	}
   	// display win or lose message, reload game
   	displayMessage(message) {
