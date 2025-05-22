@@ -421,6 +421,7 @@ class Data extends React.Component {
 		for (let x=0; x<this.props.mapWidth; x++) {
 			this.grid[x][0].isVisible = false;
 			this.grid[x][this.props.mapHeight].isVisible = false;
+		}
       		for (let y=0; y<this.props.mapHeight; y++) {
         		this.grid[0][y].isVisible = false;
 			this.grid[this.props.mapWidth][y].isVisible = false;
