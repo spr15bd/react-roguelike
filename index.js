@@ -412,6 +412,9 @@ class Data extends React.Component {
   	}
   	async toggleDarkness() {
 		this.isDark = !this.isDark;
+		if (this.isDark) {
+			this.setDark = true;
+		}
 		await this.updateMap();
   	}
 	async resetGrid() {
